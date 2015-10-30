@@ -21,7 +21,7 @@ If a file /etc/tinyproxy.filter exists (mount it if you need it) then it will be
                    -d --name tiny        dtgilles/tinyproxy
 
  * you also can add any config option out of "man tinyproxy.conf (5)", but you have to precede Option with "-":
-	docker run -d --name tiny        dtgilles/tinyproxy \
-                   -Allow       10/8 \
-                   -No Upstream 10/8 \
-                   -Upstream proxy.company:3128
+    	docker run -d --name tiny        dtgilles/tinyproxy \
+                       -Allow       10/8 \
+                       -No Upstream 10/8 \
+                       -Upstream proxy.company:3128
