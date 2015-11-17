@@ -10,7 +10,7 @@ ENTRYPOINT ["/entry.sh"]
 
 RUN     sed -i -e 's|^Logfile.*|Logfile "/logs/tinyproxy.log"|; \
                    s|^PidFile.*|PidFile "/logs/tinyproxy.pid"|'      /etc/tinyproxy.conf \
-        && echo "Allow  0.0.0.0/0"                                 > /etc/tinyproxy.conf
+        && echo "Allow  0.0.0.0/0"                                >> /etc/tinyproxy.conf
 
 RUN mkdir /logs
 VOLUME    /logs
