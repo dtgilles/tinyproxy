@@ -4,6 +4,12 @@ This is a debian based tinyproxy installation. Usually tinyproxy doesn't allow s
 
 If a file /etc/tinyproxy.filter exists (mount it if you need it) then it will be used as "Filter" file. That is a white list of allowed domains. You invert the meaning to white list using "-FilterDefaultDeny Yes" or you can force interpretation as URL -- plain or as regex; see man page for more information.
 
+## use case: develop in changing proxy environments
+
+What can we do with such a tinyproxy? Beside the obvious use case "setup a static proxy" it could be convenient for developers. They have to switch their environment often: sometimes they work at home (without proxy), sometimes they work inside company networks (fixed proxy). These developers could configure their (docker-) applications to an instance of this docker container. And if they change their environment they just have to start this image with parameters that fit to their current network environment. It's like a proxy selector for all application at once.
+
+
+
 ## examples
 
  * Following command line starts a tinyproxy container: named "tiny" that proxies all your data to the internet:
