@@ -28,8 +28,8 @@ What can we do with such a tinyproxy? Beside the obvious use case "setup a stati
 
  * but the clou is that you can set any configuration option out of "man tinyproxy.conf (5)", if you precede it with "-":
 
-        docker run -d --name tiny        dtgilles/tinyproxy \
-               -p               8888:8888 \
+        docker run -p           8888:8888 \
+               -d --name tiny   dtgilles/tinyproxy \
                -Allow           10.0.0.0/8 \
                -No Upstream     10.0.0.0/8 \
                -No Upstream     .internal.company.com \
