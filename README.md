@@ -26,7 +26,7 @@ What can we do with such a tinyproxy? Beside the obvious use case "setup a stati
         docker run -v /container/tinyproxy.filter:/etc/tinyproxy.filter:ro \
                -d --name tiny   dtgilles/tinyproxy
 
- * but the clou is that you can set any configuration option out of "man tinyproxy.conf (5)", if you precede it with "-":
+ * but the main idea of this docker images is to enable you to set any configuration option you want -- just precede it (see man page for option list) with "-"; that's how it works:
 
         docker run -p           8888:8888 \
                -d --name tiny   dtgilles/tinyproxy \
