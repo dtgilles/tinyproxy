@@ -37,6 +37,11 @@ What can we do with such a tinyproxy? Beside the obvious use case "setup a stati
 
  this command starts a "tiny" named container listening on port 8888 that allows connections from clients with 10/8 ip addresses; all request are sent to upstream proxy except they focus on ip range 10/8 or names out of the domain "internal.company.com"
 
+ ATTENTION! If your configuration values use special characters (like ";" or spaces or quotes), you have to quote them, e.g. 
+
+         -option 'value1 value2'
+         -option '"value"'
+
  * if you'd like to look inside the logs try
 
          docker exec -it tiny tail -f /logs/tinyproxy.log
